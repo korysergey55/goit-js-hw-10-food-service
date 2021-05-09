@@ -1,30 +1,28 @@
-import menu from '../menu.json';
-
-//const test = "hello world";
-// function printText(string) {
-//     console.log(string)
-// }
-// printText(test);
-// console.log(menu);
 
 //экспорт по default
-//export default printText;
-
-//Именованный экспорт 1
-// export const test = "hello world";
-// export function printText(string) {
-//     console.log(string)
-// }
-// printText(test);
-// console.log(menu);
-
-//Именованный экспорт 2
-const test = 'hello world';
+const test = 'экспорт по default';
 function printText(string) {
-  console.log(string);
+  const newelement = document.createElement('p');
+  newelement.textContent = string;
+  newelement.style.color = 'green';
+  const enterTo = document.querySelector('.new-p');
+  enterTo.append(newelement);
 }
 printText(test);
-console.log(menu);
+export default printText;
 
-export {test, printText};
+//Именованный экспорт 1
+export const test1 = 'Именованный экспорт 1';
+export function printText1(string) {
+    console.log(string)
+}
+printText1(test1);
+
+//Именованный экспорт 2
+const test2 = 'Именованный экспорт 2';
+function printText2(string) {
+  console.log(string);
+}
+printText2(test2);
+export {test2, printText2};
 

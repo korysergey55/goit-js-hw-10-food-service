@@ -1,17 +1,16 @@
 import './styles.css';
 import './js/first-commit';
+import menu from './menu.json';
 
  //импорт по default
-// import print from './js/first-commit';
-// print("hi how are you");
-// console.log(print);
+import printText from './js/first-commit';
+printText('импорт по default');
+console.log(printText);
 
 // Именованный импорт 1
-// import {test, printText} from './js/first-commit';
-// console.log(test);
-// printText('Именованный импорт');
+import {test1, printText1} from './js/first-commit';
+printText1(test1);
 
 // Именованный импорт 2
 import * as object from './js/first-commit';
-console.log(object.test);
-object.printText('rdrdfdf');
+object.printText2(object.test2);
