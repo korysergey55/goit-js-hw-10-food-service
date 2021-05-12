@@ -5,10 +5,8 @@
 // 4) Считывание данных из LocalStorage должно быть безопасным и вынесено в отдельную функцию
 
 const form = document.querySelector('#sign-in');
-
 form.addEventListener('input', onInput);
 form.addEventListener('submit', onSubmit);
-
 const formKey = 'userData';
 
 // let savedData = {
@@ -20,7 +18,6 @@ const formKey = 'userData';
 // ['address', 'city', 'email'];
 
 let savedData = getLocalStorageData(formKey);
-
 function getLocalStorageData(key) {
   try {
     return JSON.parse(localStorage.getItem(key)) ?? {};
@@ -28,24 +25,16 @@ function getLocalStorageData(key) {
     return {};
   }
 }
-
 Object.keys(savedData).forEach(key => {
   form.elements[key].value = savedData[key];
 });
 
-// Object.entries(savedData).forEach(([key, value]) => {
-//   form.elements[key].value = value;
-// });
-
 function onInput(event) {
   const input = event.target;
-
   if (input.name === 'password') {
     return;
   }
-
   savedData[input.name] = input.value;
-
   localStorage.setItem(formKey, JSON.stringify(savedData));
 
   // savedData = {
@@ -63,7 +52,6 @@ function onSubmit(event) {
 
 //
 //
-
 // const formKey = 'form';
 // const form = document.querySelector(formKey);
 // let formData = getLocalStorageData(formKey);

@@ -1,5 +1,4 @@
 // Task 1
-
 // Вывести следующую разметку по данным ниже в див с классом content-placeholder:
 
 // import makeMarkup from '../../templates/tasks.hbs';
@@ -16,13 +15,11 @@
 // };
 
 // const markup = makeMarkup(context);
-
 // container.innerHTML = markup;
 
 //////////////////////////////////////////////////
 
 // Task 2
-
 // Вывести следующую разметку по данным studentsData из db в див с классом content-placeholder:
 
 // import { studentsData } from '../../db/data';
@@ -30,7 +27,7 @@
 // const markup = makeStudentsMarkup(studentsData);
 // const placeholder = document.querySelector('.content-placeholder');
 
-// // placeholder.insertAdjacentHTML('beforeend', markup);
+// placeholder.insertAdjacentHTML('beforeend', markup);
 // placeholder.innerHTML = markup;
 
 /* <h3>Students</h3>
@@ -47,7 +44,6 @@
 //////////////////////////////////////////////////
 
 // Task 3
-
 // Вывести следующую разметку по данным peopleData из db в ul с классом list-placeholder (использовать два варианта - reduce / map или сразу массив передаем ):
 
 // import { peopleData } from '../../db/data';
@@ -67,13 +63,11 @@
 // const markup = makeMarkup(peopleData);
 
 // listRef.innerHTML = markup;
-
 /* <li>Homer Simpson</li> */
 
 //////////////////////////////////////////////////
 
 // Task 4
-
 // Вывести следующую разметку по данным animalsData из db в див с классом content-placeholder.
 // Если животное издает звук - выводить его - "Says: moooo".
 // Если животное доброе - выводить "Kind animal ❤️",
